@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SequoiaApiResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SequoiaApiResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReturnValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SequoiaApiResponse" nillable="true" type="tns:SequoiaApiResponse" />
+  <xs:complexType name="SequoiaApiResponseBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfErrorResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SequoiaApiResponseBase" nillable="true" type="tns:SequoiaApiResponseBase" />
+  <xs:complexType name="ArrayOfErrorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorResponse" nillable="true" type="tns:ErrorResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorResponse" nillable="true" type="tns:ArrayOfErrorResponse" />
+  <xs:complexType name="ErrorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDetails" nillable="true" type="tns:ArrayOfErrorDetail" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Errors" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorResponse" nillable="true" type="tns:ErrorResponse" />
+  <xs:complexType name="ArrayOfErrorDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ErrorDetail" nillable="true" type="tns:ErrorDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfErrorDetail" nillable="true" type="tns:ArrayOfErrorDetail" />
+  <xs:complexType name="ErrorDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorDetail" nillable="true" type="tns:ErrorDetail" />
+  <xs:complexType name="TransactionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SequoiaApiResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransactionResponse" nillable="true" type="tns:TransactionResponse" />
+  <xs:complexType name="SequoiaRecordListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SequoiaApiResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RecordsReturned" type="xs:int" />
+          <xs:element minOccurs="0" name="QueryToken" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SequoiaRecordListResponse" nillable="true" type="tns:SequoiaRecordListResponse" />
+  <xs:complexType name="SequoiaValidationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SequoiaApiResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReturnValue" nillable="true" type="tns:ArrayOfValidationResponse" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SequoiaValidationResponse" nillable="true" type="tns:SequoiaValidationResponse" />
+  <xs:complexType name="ArrayOfValidationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationResponse" nillable="true" type="tns:ValidationResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidationResponse" nillable="true" type="tns:ArrayOfValidationResponse" />
+  <xs:complexType name="ValidationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SequoiaApiResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidationType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidationResponse" nillable="true" type="tns:ValidationResponse" />
+</xs:schema>

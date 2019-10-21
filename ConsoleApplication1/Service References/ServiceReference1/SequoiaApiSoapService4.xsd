@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+  <xs:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" />
+  <xs:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" />
+  <xs:element name="GetMetaData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMetaDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="GetMetaDataResult" type="q1:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXsdMetaData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q2:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetXsdMetaDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetXsdMetaDataResult" nillable="true" type="q3:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApiVersion">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApiVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetApiVersionResult" nillable="true" type="q4:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="batchProcessRequest" nillable="true" type="q5:BatchProcessRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="ProcessBatchResult" nillable="true" type="q6:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeginTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="transactionRequest" nillable="true" type="q7:TransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BeginTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="BeginTransactionResult" nillable="true" type="q8:TransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommitTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="transactionRequest" nillable="true" type="q9:TransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CommitTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CommitTransactionResult" nillable="true" type="q10:TransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RollbackTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="transactionRequest" nillable="true" type="q11:TransactionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RollbackTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="RollbackTransactionResult" nillable="true" type="q12:TransactionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentInventoriesFromDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q13:ModifiedRecordsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentInventoriesFromDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetAgentInventoriesFromDateResult" nillable="true" type="q14:SequoiaRecordListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentInventoryRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q15:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgentInventoryRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetAgentInventoryRecordResult" nillable="true" type="q16:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFrontierDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="responseRequest" nillable="true" type="q17:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFrontierDeclarationResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetFrontierDeclarationResponseResult" nillable="true" type="q18:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q19:ValidateRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="ValidateGbDeclarationResult" nillable="true" type="q20:SequoiaValidationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateImportGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q21:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateImportGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateImportGbDeclarationResult" nillable="true" type="q22:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFsdImportGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="createRequest" nillable="true" type="q23:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFsdImportGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateFsdImportGbDeclarationResult" nillable="true" type="q24:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExportGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q25:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExportGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateExportGbDeclarationResult" nillable="true" type="q26:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateImportGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q27:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateImportGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UpdateImportGbDeclarationResult" nillable="true" type="q28:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExportGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q29:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExportGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UpdateExportGbDeclarationResult" nillable="true" type="q30:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q31:DeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="DeleteGbDeclarationResult" nillable="true" type="q32:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q33:SendRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="SendGbDeclarationResult" nillable="true" type="q34:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationReportList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="responseRequest" nillable="true" type="q35:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationReportListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetGbDeclarationReportListResult" nillable="true" type="q36:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFullAcceptedDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="responseRequest" nillable="true" type="q37:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFullAcceptedDeclarationResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetFullAcceptedDeclarationResponseResult" nillable="true" type="q38:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomsReportDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="responseRequest" nillable="true" type="q39:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomsReportDeclarationResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetCustomsReportDeclarationResponseResult" nillable="true" type="q40:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationErrorResponseList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="responseRequest" nillable="true" type="q41:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationErrorResponseListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetGbDeclarationErrorResponseListResult" nillable="true" type="q42:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="responseRequest" nillable="true" type="q43:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetGbDeclarationResult" nillable="true" type="q44:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendGbDeclarationCancellation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="sendRequest" nillable="true" type="q45:SendRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendGbDeclarationCancellationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="SendGbDeclarationCancellationResult" nillable="true" type="q46:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AmendAcceptedExportGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="updateRequest" nillable="true" type="q47:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AmendAcceptedExportGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="AmendAcceptedExportGbDeclarationResult" nillable="true" type="q48:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AmendAcceptedImportGbDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="updateRequest" nillable="true" type="q49:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AmendAcceptedImportGbDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="AmendAcceptedImportGbDeclarationResult" nillable="true" type="q50:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationsModifiedSince">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="getRequest" nillable="true" type="q51:GetRecordsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationsModifiedSinceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetGbDeclarationsModifiedSinceResult" nillable="true" type="q52:SequoiaRecordListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationTemplateList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="getRequest" nillable="true" type="q53:GetRecordsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationTemplateListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetGbDeclarationTemplateListResult" nillable="true" type="q54:SequoiaRecordListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationFromTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="getRequest" nillable="true" type="q55:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGbDeclarationFromTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetGbDeclarationFromTemplateResult" nillable="true" type="q56:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="createRequest" nillable="true" type="q57:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateJobResult" nillable="true" type="q58:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="updateRequest" nillable="true" type="q59:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UpdateJobResult" nillable="true" type="q60:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="deleteRequest" nillable="true" type="q61:DeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="DeleteJobResult" nillable="true" type="q62:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkJobToShipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="linkRequest" nillable="true" type="q63:LinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkJobToShipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="LinkJobToShipmentResult" nillable="true" type="q64:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlinkJobFromShipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="linkRequest" nillable="true" type="q65:LinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlinkJobFromShipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UnlinkJobFromShipmentResult" nillable="true" type="q66:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkJobToAgentInventory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="linkRequest" nillable="true" type="q67:LinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkJobToAgentInventoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="LinkJobToAgentInventoryResult" nillable="true" type="q68:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlinkJobFromAgentInventory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="linkRequest" nillable="true" type="q69:LinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnlinkJobFromAgentInventoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UnlinkJobFromAgentInventoryResult" nillable="true" type="q70:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkJobToDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="linkRequest" nillable="true" type="q71:LinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LinkJobToDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="LinkJobToDeclarationResult" nillable="true" type="q72:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddReferenceToJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="linkRequest" nillable="true" type="q73:LinkRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddReferenceToJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="AddReferenceToJobResult" nillable="true" type="q74:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJobReferenceType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="createRequest" nillable="true" type="q75:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJobReferenceTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateJobReferenceTypeResult" nillable="true" type="q76:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="responseRequest" nillable="true" type="q77:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetJobResult" nillable="true" type="q78:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateShipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="createRequest" nillable="true" type="q79:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateShipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateShipmentResult" nillable="true" type="q80:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateShipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="updateRequest" nillable="true" type="q81:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateShipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UpdateShipmentResult" nillable="true" type="q82:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteShipment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="deleteRequest" nillable="true" type="q83:DeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteShipmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="DeleteShipmentResult" nillable="true" type="q84:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCrmAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="createRequest" nillable="true" type="q85:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCrmAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateCrmAccountResult" nillable="true" type="q86:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCrmAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="updateRequest" nillable="true" type="q87:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCrmAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UpdateCrmAccountResult" nillable="true" type="q88:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUniqueCrmAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="specificRecordRequest" nillable="true" type="q89:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUniqueCrmAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetUniqueCrmAccountResult" nillable="true" type="q90:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateWorksheet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="createRequest" nillable="true" type="q91:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateWorksheetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateWorksheetResult" nillable="true" type="q92:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorksheetReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="lookUpRequest" nillable="true" type="q93:LookUpRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorksheetReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetWorksheetReportResult" nillable="true" type="q94:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorksheetsModifiedWithinDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q95:GetRecordsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorksheetsModifiedWithinDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetWorksheetsModifiedWithinDateRangeResult" nillable="true" type="q96:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lookup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="lookupRequest" nillable="true" type="q97:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="LookupResult" nillable="true" type="q98:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEtsfConsignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q99:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEtsfConsignmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateEtsfConsignmentResult" nillable="true" type="q100:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEtsfConsignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q101:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEtsfConsignmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UpdateEtsfConsignmentResult" nillable="true" type="q102:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtsfConsignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q103:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEtsfConsignmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetEtsfConsignmentResult" nillable="true" type="q104:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEtsfConsignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q105:DeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEtsfConsignmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="DeleteEtsfConsignmentResult" nillable="true" type="q106:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MaintainEtsfSplitConsignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q107:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MaintainEtsfSplitConsignmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="MaintainEtsfSplitConsignmentResult" nillable="true" type="q108:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEtsfHouseConsignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q109:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEtsfHouseConsignmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="AddEtsfHouseConsignmentResult" nillable="true" type="q110:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEtsfPreArrivalConsignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q111:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEtsfPreArrivalConsignmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateEtsfPreArrivalConsignmentResult" nillable="true" type="q112:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEtsfPreArrivalConsignment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q113:UpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEtsfPreArrivalConsignmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="UpdateEtsfPreArrivalConsignmentResult" nillable="true" type="q114:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssociateDucrToMucr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q115:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssociateDucrToMucrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="AssociateDucrToMucrResult" nillable="true" type="q116:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisassociateDucrFromMucr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q117:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisassociateDucrFromMucrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="DisassociateDucrFromMucrResult" nillable="true" type="q118:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseMucr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q119:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseMucrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CloseMucrResult" nillable="true" type="q120:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEvents">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetEventsResult" nillable="true" type="q121:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNctsDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q122:CreateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateNctsDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="CreateNctsDeclarationResult" nillable="true" type="q123:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNctsDeclaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="sendRequest" nillable="true" type="q124:SendRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendNctsDeclarationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="SendNctsDeclarationResult" nillable="true" type="q125:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNctsDeclarationStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" minOccurs="0" name="request" nillable="true" type="q126:GetSpecificRecordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNctsDeclarationStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" minOccurs="0" name="GetNctsDeclarationStatusResult" nillable="true" type="q127:SequoiaApiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

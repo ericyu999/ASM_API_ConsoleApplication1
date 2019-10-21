@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SequoiaApiSoapService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" />
+      <xsd:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Response" />
+      <xsd:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISequoiaApiSoapService_GetMetaData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetMetaData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetXsdMetaData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetXsdMetaData" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetXsdMetaData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetXsdMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetApiVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApiVersion" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetApiVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApiVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_ProcessBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessBatch" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_ProcessBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_BeginTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:BeginTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_BeginTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BeginTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CommitTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:CommitTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CommitTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CommitTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_RollbackTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:RollbackTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_RollbackTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RollbackTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetAgentInventoriesFromDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentInventoriesFromDate" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetAgentInventoriesFromDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentInventoriesFromDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetAgentInventoryRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentInventoryRecord" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetAgentInventoryRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentInventoryRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetFrontierDeclarationResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFrontierDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetFrontierDeclarationResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFrontierDeclarationResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_ValidateGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_ValidateGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateImportGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateImportGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateImportGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateImportGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateFsdImportGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFsdImportGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateFsdImportGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFsdImportGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateExportGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExportGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateExportGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExportGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateImportGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImportGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateImportGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImportGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateExportGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExportGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateExportGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExportGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DeleteGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DeleteGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_SendGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_SendGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationReportList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationReportList" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationReportList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationReportListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetFullAcceptedDeclarationResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullAcceptedDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetFullAcceptedDeclarationResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullAcceptedDeclarationResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetCustomsReportDeclarationResponse_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomsReportDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetCustomsReportDeclarationResponse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomsReportDeclarationResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationErrorResponseList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationErrorResponseList" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationErrorResponseList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationErrorResponseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_SendGbDeclarationCancellation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendGbDeclarationCancellation" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_SendGbDeclarationCancellation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendGbDeclarationCancellationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AmendAcceptedExportGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:AmendAcceptedExportGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AmendAcceptedExportGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AmendAcceptedExportGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AmendAcceptedImportGbDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:AmendAcceptedImportGbDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AmendAcceptedImportGbDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AmendAcceptedImportGbDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationsModifiedSince_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationsModifiedSince" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationsModifiedSince_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationsModifiedSinceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationTemplateList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationTemplateList" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationTemplateList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationTemplateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationFromTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationFromTemplate" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetGbDeclarationFromTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGbDeclarationFromTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJob" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJob" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DeleteJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJob" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DeleteJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_LinkJobToShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:LinkJobToShipment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_LinkJobToShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LinkJobToShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UnlinkJobFromShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnlinkJobFromShipment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UnlinkJobFromShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlinkJobFromShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_LinkJobToAgentInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:LinkJobToAgentInventory" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_LinkJobToAgentInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LinkJobToAgentInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UnlinkJobFromAgentInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnlinkJobFromAgentInventory" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UnlinkJobFromAgentInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnlinkJobFromAgentInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_LinkJobToDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:LinkJobToDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_LinkJobToDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LinkJobToDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AddReferenceToJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddReferenceToJob" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AddReferenceToJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddReferenceToJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateJobReferenceType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobReferenceType" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateJobReferenceType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobReferenceTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJob" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShipment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShipment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DeleteShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShipment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DeleteShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShipmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateCrmAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCrmAccount" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateCrmAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCrmAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateCrmAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCrmAccount" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateCrmAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCrmAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetUniqueCrmAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUniqueCrmAccount" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetUniqueCrmAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUniqueCrmAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateWorksheet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWorksheet" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateWorksheet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWorksheetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetWorksheetReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorksheetReport" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetWorksheetReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorksheetReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetWorksheetsModifiedWithinDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorksheetsModifiedWithinDateRange" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetWorksheetsModifiedWithinDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorksheetsModifiedWithinDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_Lookup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Lookup" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_Lookup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateEtsfConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEtsfConsignment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateEtsfConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEtsfConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateEtsfConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEtsfConsignment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateEtsfConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEtsfConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetEtsfConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEtsfConsignment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetEtsfConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEtsfConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DeleteEtsfConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEtsfConsignment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DeleteEtsfConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEtsfConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_MaintainEtsfSplitConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:MaintainEtsfSplitConsignment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_MaintainEtsfSplitConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MaintainEtsfSplitConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AddEtsfHouseConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEtsfHouseConsignment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AddEtsfHouseConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEtsfHouseConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateEtsfPreArrivalConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEtsfPreArrivalConsignment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateEtsfPreArrivalConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEtsfPreArrivalConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateEtsfPreArrivalConsignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEtsfPreArrivalConsignment" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_UpdateEtsfPreArrivalConsignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEtsfPreArrivalConsignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AssociateDucrToMucr_InputMessage">
+    <wsdl:part name="parameters" element="tns:AssociateDucrToMucr" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_AssociateDucrToMucr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AssociateDucrToMucrResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DisassociateDucrFromMucr_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisassociateDucrFromMucr" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_DisassociateDucrFromMucr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisassociateDucrFromMucrResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CloseMucr_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseMucr" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CloseMucr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseMucrResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateNctsDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNctsDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_CreateNctsDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNctsDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_SendNctsDeclaration_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendNctsDeclaration" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_SendNctsDeclaration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendNctsDeclarationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetNctsDeclarationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNctsDeclarationStatus" />
+  </wsdl:message>
+  <wsdl:message name="ISequoiaApiSoapService_GetNctsDeclarationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNctsDeclarationStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISequoiaApiSoapService">
+    <wsdl:operation name="GetMetaData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetMetaData" message="tns:ISequoiaApiSoapService_GetMetaData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetMetaDataResponse" message="tns:ISequoiaApiSoapService_GetMetaData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXsdMetaData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetXsdMetaData" message="tns:ISequoiaApiSoapService_GetXsdMetaData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetXsdMetaDataResponse" message="tns:ISequoiaApiSoapService_GetXsdMetaData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApiVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetApiVersion" message="tns:ISequoiaApiSoapService_GetApiVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetApiVersionResponse" message="tns:ISequoiaApiSoapService_GetApiVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/ProcessBatch" message="tns:ISequoiaApiSoapService_ProcessBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/ProcessBatchResponse" message="tns:ISequoiaApiSoapService_ProcessBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BeginTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/BeginTransaction" message="tns:ISequoiaApiSoapService_BeginTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/BeginTransactionResponse" message="tns:ISequoiaApiSoapService_BeginTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CommitTransaction" message="tns:ISequoiaApiSoapService_CommitTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CommitTransactionResponse" message="tns:ISequoiaApiSoapService_CommitTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RollbackTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/RollbackTransaction" message="tns:ISequoiaApiSoapService_RollbackTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/RollbackTransactionResponse" message="tns:ISequoiaApiSoapService_RollbackTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentInventoriesFromDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetAgentInventoriesFromDate" message="tns:ISequoiaApiSoapService_GetAgentInventoriesFromDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetAgentInventoriesFromDateResponse" message="tns:ISequoiaApiSoapService_GetAgentInventoriesFromDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentInventoryRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetAgentInventoryRecord" message="tns:ISequoiaApiSoapService_GetAgentInventoryRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetAgentInventoryRecordResponse" message="tns:ISequoiaApiSoapService_GetAgentInventoryRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFrontierDeclarationResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetFrontierDeclarationResponse" message="tns:ISequoiaApiSoapService_GetFrontierDeclarationResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetFrontierDeclarationResponseResponse" message="tns:ISequoiaApiSoapService_GetFrontierDeclarationResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/ValidateGbDeclaration" message="tns:ISequoiaApiSoapService_ValidateGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/ValidateGbDeclarationResponse" message="tns:ISequoiaApiSoapService_ValidateGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateImportGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateImportGbDeclaration" message="tns:ISequoiaApiSoapService_CreateImportGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateImportGbDeclarationResponse" message="tns:ISequoiaApiSoapService_CreateImportGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFsdImportGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateFsdImportGbDeclaration" message="tns:ISequoiaApiSoapService_CreateFsdImportGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateFsdImportGbDeclarationResponse" message="tns:ISequoiaApiSoapService_CreateFsdImportGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExportGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateExportGbDeclaration" message="tns:ISequoiaApiSoapService_CreateExportGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateExportGbDeclarationResponse" message="tns:ISequoiaApiSoapService_CreateExportGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImportGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateImportGbDeclaration" message="tns:ISequoiaApiSoapService_UpdateImportGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateImportGbDeclarationResponse" message="tns:ISequoiaApiSoapService_UpdateImportGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExportGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateExportGbDeclaration" message="tns:ISequoiaApiSoapService_UpdateExportGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateExportGbDeclarationResponse" message="tns:ISequoiaApiSoapService_UpdateExportGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DeleteGbDeclaration" message="tns:ISequoiaApiSoapService_DeleteGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DeleteGbDeclarationResponse" message="tns:ISequoiaApiSoapService_DeleteGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/SendGbDeclaration" message="tns:ISequoiaApiSoapService_SendGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/SendGbDeclarationResponse" message="tns:ISequoiaApiSoapService_SendGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationReportList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationReportList" message="tns:ISequoiaApiSoapService_GetGbDeclarationReportList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationReportListResponse" message="tns:ISequoiaApiSoapService_GetGbDeclarationReportList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullAcceptedDeclarationResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetFullAcceptedDeclarationResponse" message="tns:ISequoiaApiSoapService_GetFullAcceptedDeclarationResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetFullAcceptedDeclarationResponseResponse" message="tns:ISequoiaApiSoapService_GetFullAcceptedDeclarationResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomsReportDeclarationResponse">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetCustomsReportDeclarationResponse" message="tns:ISequoiaApiSoapService_GetCustomsReportDeclarationResponse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetCustomsReportDeclarationResponseResponse" message="tns:ISequoiaApiSoapService_GetCustomsReportDeclarationResponse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationErrorResponseList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationErrorResponseList" message="tns:ISequoiaApiSoapService_GetGbDeclarationErrorResponseList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationErrorResponseListResponse" message="tns:ISequoiaApiSoapService_GetGbDeclarationErrorResponseList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclaration" message="tns:ISequoiaApiSoapService_GetGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationResponse" message="tns:ISequoiaApiSoapService_GetGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendGbDeclarationCancellation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/SendGbDeclarationCancellation" message="tns:ISequoiaApiSoapService_SendGbDeclarationCancellation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/SendGbDeclarationCancellationResponse" message="tns:ISequoiaApiSoapService_SendGbDeclarationCancellation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AmendAcceptedExportGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AmendAcceptedExportGbDeclaration" message="tns:ISequoiaApiSoapService_AmendAcceptedExportGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AmendAcceptedExportGbDeclarationResponse" message="tns:ISequoiaApiSoapService_AmendAcceptedExportGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AmendAcceptedImportGbDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AmendAcceptedImportGbDeclaration" message="tns:ISequoiaApiSoapService_AmendAcceptedImportGbDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AmendAcceptedImportGbDeclarationResponse" message="tns:ISequoiaApiSoapService_AmendAcceptedImportGbDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationsModifiedSince">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationsModifiedSince" message="tns:ISequoiaApiSoapService_GetGbDeclarationsModifiedSince_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationsModifiedSinceResponse" message="tns:ISequoiaApiSoapService_GetGbDeclarationsModifiedSince_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationTemplateList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationTemplateList" message="tns:ISequoiaApiSoapService_GetGbDeclarationTemplateList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationTemplateListResponse" message="tns:ISequoiaApiSoapService_GetGbDeclarationTemplateList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationFromTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationFromTemplate" message="tns:ISequoiaApiSoapService_GetGbDeclarationFromTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationFromTemplateResponse" message="tns:ISequoiaApiSoapService_GetGbDeclarationFromTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateJob" message="tns:ISequoiaApiSoapService_CreateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateJobResponse" message="tns:ISequoiaApiSoapService_CreateJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateJob" message="tns:ISequoiaApiSoapService_UpdateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateJobResponse" message="tns:ISequoiaApiSoapService_UpdateJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DeleteJob" message="tns:ISequoiaApiSoapService_DeleteJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DeleteJobResponse" message="tns:ISequoiaApiSoapService_DeleteJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkJobToShipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/LinkJobToShipment" message="tns:ISequoiaApiSoapService_LinkJobToShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/LinkJobToShipmentResponse" message="tns:ISequoiaApiSoapService_LinkJobToShipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlinkJobFromShipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UnlinkJobFromShipment" message="tns:ISequoiaApiSoapService_UnlinkJobFromShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UnlinkJobFromShipmentResponse" message="tns:ISequoiaApiSoapService_UnlinkJobFromShipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkJobToAgentInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/LinkJobToAgentInventory" message="tns:ISequoiaApiSoapService_LinkJobToAgentInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/LinkJobToAgentInventoryResponse" message="tns:ISequoiaApiSoapService_LinkJobToAgentInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlinkJobFromAgentInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UnlinkJobFromAgentInventory" message="tns:ISequoiaApiSoapService_UnlinkJobFromAgentInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UnlinkJobFromAgentInventoryResponse" message="tns:ISequoiaApiSoapService_UnlinkJobFromAgentInventory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LinkJobToDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/LinkJobToDeclaration" message="tns:ISequoiaApiSoapService_LinkJobToDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/LinkJobToDeclarationResponse" message="tns:ISequoiaApiSoapService_LinkJobToDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddReferenceToJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AddReferenceToJob" message="tns:ISequoiaApiSoapService_AddReferenceToJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AddReferenceToJobResponse" message="tns:ISequoiaApiSoapService_AddReferenceToJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobReferenceType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateJobReferenceType" message="tns:ISequoiaApiSoapService_CreateJobReferenceType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateJobReferenceTypeResponse" message="tns:ISequoiaApiSoapService_CreateJobReferenceType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetJob" message="tns:ISequoiaApiSoapService_GetJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetJobResponse" message="tns:ISequoiaApiSoapService_GetJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateShipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateShipment" message="tns:ISequoiaApiSoapService_CreateShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateShipmentResponse" message="tns:ISequoiaApiSoapService_CreateShipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateShipment" message="tns:ISequoiaApiSoapService_UpdateShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateShipmentResponse" message="tns:ISequoiaApiSoapService_UpdateShipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DeleteShipment" message="tns:ISequoiaApiSoapService_DeleteShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DeleteShipmentResponse" message="tns:ISequoiaApiSoapService_DeleteShipment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCrmAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateCrmAccount" message="tns:ISequoiaApiSoapService_CreateCrmAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateCrmAccountResponse" message="tns:ISequoiaApiSoapService_CreateCrmAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCrmAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateCrmAccount" message="tns:ISequoiaApiSoapService_UpdateCrmAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateCrmAccountResponse" message="tns:ISequoiaApiSoapService_UpdateCrmAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUniqueCrmAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetUniqueCrmAccount" message="tns:ISequoiaApiSoapService_GetUniqueCrmAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetUniqueCrmAccountResponse" message="tns:ISequoiaApiSoapService_GetUniqueCrmAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWorksheet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateWorksheet" message="tns:ISequoiaApiSoapService_CreateWorksheet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateWorksheetResponse" message="tns:ISequoiaApiSoapService_CreateWorksheet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorksheetReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetWorksheetReport" message="tns:ISequoiaApiSoapService_GetWorksheetReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetWorksheetReportResponse" message="tns:ISequoiaApiSoapService_GetWorksheetReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorksheetsModifiedWithinDateRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetWorksheetsModifiedWithinDateRange" message="tns:ISequoiaApiSoapService_GetWorksheetsModifiedWithinDateRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetWorksheetsModifiedWithinDateRangeResponse" message="tns:ISequoiaApiSoapService_GetWorksheetsModifiedWithinDateRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Lookup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/Lookup" message="tns:ISequoiaApiSoapService_Lookup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/LookupResponse" message="tns:ISequoiaApiSoapService_Lookup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEtsfConsignment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateEtsfConsignment" message="tns:ISequoiaApiSoapService_CreateEtsfConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateEtsfConsignmentResponse" message="tns:ISequoiaApiSoapService_CreateEtsfConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEtsfConsignment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateEtsfConsignment" message="tns:ISequoiaApiSoapService_UpdateEtsfConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateEtsfConsignmentResponse" message="tns:ISequoiaApiSoapService_UpdateEtsfConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEtsfConsignment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetEtsfConsignment" message="tns:ISequoiaApiSoapService_GetEtsfConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetEtsfConsignmentResponse" message="tns:ISequoiaApiSoapService_GetEtsfConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEtsfConsignment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DeleteEtsfConsignment" message="tns:ISequoiaApiSoapService_DeleteEtsfConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DeleteEtsfConsignmentResponse" message="tns:ISequoiaApiSoapService_DeleteEtsfConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintainEtsfSplitConsignment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/MaintainEtsfSplitConsignment" message="tns:ISequoiaApiSoapService_MaintainEtsfSplitConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/MaintainEtsfSplitConsignmentResponse" message="tns:ISequoiaApiSoapService_MaintainEtsfSplitConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEtsfHouseConsignment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AddEtsfHouseConsignment" message="tns:ISequoiaApiSoapService_AddEtsfHouseConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AddEtsfHouseConsignmentResponse" message="tns:ISequoiaApiSoapService_AddEtsfHouseConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEtsfPreArrivalConsignment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateEtsfPreArrivalConsignment" message="tns:ISequoiaApiSoapService_CreateEtsfPreArrivalConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateEtsfPreArrivalConsignmentResponse" message="tns:ISequoiaApiSoapService_CreateEtsfPreArrivalConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEtsfPreArrivalConsignment">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateEtsfPreArrivalConsignment" message="tns:ISequoiaApiSoapService_UpdateEtsfPreArrivalConsignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/UpdateEtsfPreArrivalConsignmentResponse" message="tns:ISequoiaApiSoapService_UpdateEtsfPreArrivalConsignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssociateDucrToMucr">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AssociateDucrToMucr" message="tns:ISequoiaApiSoapService_AssociateDucrToMucr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/AssociateDucrToMucrResponse" message="tns:ISequoiaApiSoapService_AssociateDucrToMucr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisassociateDucrFromMucr">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DisassociateDucrFromMucr" message="tns:ISequoiaApiSoapService_DisassociateDucrFromMucr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/DisassociateDucrFromMucrResponse" message="tns:ISequoiaApiSoapService_DisassociateDucrFromMucr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseMucr">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CloseMucr" message="tns:ISequoiaApiSoapService_CloseMucr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CloseMucrResponse" message="tns:ISequoiaApiSoapService_CloseMucr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetEvents" message="tns:ISequoiaApiSoapService_GetEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetEventsResponse" message="tns:ISequoiaApiSoapService_GetEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNctsDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateNctsDeclaration" message="tns:ISequoiaApiSoapService_CreateNctsDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/CreateNctsDeclarationResponse" message="tns:ISequoiaApiSoapService_CreateNctsDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNctsDeclaration">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/SendNctsDeclaration" message="tns:ISequoiaApiSoapService_SendNctsDeclaration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/SendNctsDeclarationResponse" message="tns:ISequoiaApiSoapService_SendNctsDeclaration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNctsDeclarationStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetNctsDeclarationStatus" message="tns:ISequoiaApiSoapService_GetNctsDeclarationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISequoiaApiSoapService/GetNctsDeclarationStatusResponse" message="tns:ISequoiaApiSoapService_GetNctsDeclarationStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISequoiaApiSoapService" type="tns:ISequoiaApiSoapService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMetaData">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXsdMetaData">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetXsdMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApiVersion">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetApiVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessBatch">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/ProcessBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginTransaction">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/BeginTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitTransaction">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CommitTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RollbackTransaction">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/RollbackTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentInventoriesFromDate">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetAgentInventoriesFromDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentInventoryRecord">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetAgentInventoryRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFrontierDeclarationResponse">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetFrontierDeclarationResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/ValidateGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateImportGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateImportGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFsdImportGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateFsdImportGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExportGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateExportGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImportGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UpdateImportGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExportGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UpdateExportGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/DeleteGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/SendGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationReportList">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationReportList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullAcceptedDeclarationResponse">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetFullAcceptedDeclarationResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomsReportDeclarationResponse">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetCustomsReportDeclarationResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationErrorResponseList">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationErrorResponseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendGbDeclarationCancellation">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/SendGbDeclarationCancellation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmendAcceptedExportGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/AmendAcceptedExportGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AmendAcceptedImportGbDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/AmendAcceptedImportGbDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationsModifiedSince">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationsModifiedSince" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationTemplateList">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationTemplateList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGbDeclarationFromTemplate">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetGbDeclarationFromTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJob">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJob">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UpdateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/DeleteJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkJobToShipment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/LinkJobToShipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlinkJobFromShipment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UnlinkJobFromShipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkJobToAgentInventory">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/LinkJobToAgentInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlinkJobFromAgentInventory">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UnlinkJobFromAgentInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LinkJobToDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/LinkJobToDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReferenceToJob">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/AddReferenceToJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobReferenceType">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateJobReferenceType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJob">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShipment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateShipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShipment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UpdateShipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShipment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/DeleteShipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCrmAccount">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateCrmAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCrmAccount">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UpdateCrmAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUniqueCrmAccount">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetUniqueCrmAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWorksheet">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateWorksheet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorksheetReport">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetWorksheetReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorksheetsModifiedWithinDateRange">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetWorksheetsModifiedWithinDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lookup">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/Lookup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEtsfConsignment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateEtsfConsignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEtsfConsignment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UpdateEtsfConsignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEtsfConsignment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetEtsfConsignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEtsfConsignment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/DeleteEtsfConsignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintainEtsfSplitConsignment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/MaintainEtsfSplitConsignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEtsfHouseConsignment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/AddEtsfHouseConsignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEtsfPreArrivalConsignment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateEtsfPreArrivalConsignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEtsfPreArrivalConsignment">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/UpdateEtsfPreArrivalConsignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssociateDucrToMucr">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/AssociateDucrToMucr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisassociateDucrFromMucr">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/DisassociateDucrFromMucr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseMucr">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CloseMucr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNctsDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/CreateNctsDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNctsDeclaration">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/SendNctsDeclaration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNctsDeclarationStatus">
+      <soap:operation soapAction="http://tempuri.org/ISequoiaApiSoapService/GetNctsDeclarationStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SequoiaApiSoapService">
+    <wsdl:port name="BasicHttpBinding_ISequoiaApiSoapService" binding="tns:BasicHttpBinding_ISequoiaApiSoapService">
+      <soap:address location="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

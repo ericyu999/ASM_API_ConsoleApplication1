@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ASM.Sequoia.Api.Contracts.DataContracts.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="GetSpecificRecordRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NaturalKey" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSpecificRecordRequest" nillable="true" type="tns:GetSpecificRecordRequest" />
+  <xs:complexType name="TransactionBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TransactionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImpersonationContextId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionBase" nillable="true" type="tns:TransactionBase" />
+  <xs:complexType name="BatchProcessRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BatchProcessRequest" nillable="true" type="tns:BatchProcessRequest" />
+  <xs:complexType name="TransactionRequest">
+    <xs:sequence>
+      <xs:element name="TransactionId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransactionRequest" nillable="true" type="tns:TransactionRequest" />
+  <xs:complexType name="ModifiedRecordsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TokenBasedRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ModifiedSince" type="xs:dateTime" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BadgeList" nillable="true" type="q1:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ModifiedRecordsRequest" nillable="true" type="tns:ModifiedRecordsRequest" />
+  <xs:complexType name="TokenBasedRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueryToken" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TokenBasedRequest" nillable="true" type="tns:TokenBasedRequest" />
+  <xs:complexType name="ValidateRecordRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RecordToValidate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidateRecordRequest" nillable="true" type="tns:ValidateRecordRequest" />
+  <xs:complexType name="CreateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRequest" nillable="true" type="tns:CreateRequest" />
+  <xs:complexType name="UpdateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateRequest" nillable="true" type="tns:UpdateRequest" />
+  <xs:complexType name="DeleteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeleteRequest" nillable="true" type="tns:DeleteRequest" />
+  <xs:complexType name="SendRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendRequest" nillable="true" type="tns:SendRequest" />
+  <xs:complexType name="GetRecordsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TokenBasedRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRecordsRequest" nillable="true" type="tns:GetRecordsRequest" />
+  <xs:complexType name="LinkRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LinkRequest" nillable="true" type="tns:LinkRequest" />
+  <xs:complexType name="LookUpRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TransactionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookUpRequest" nillable="true" type="tns:LookUpRequest" />
+</xs:schema>

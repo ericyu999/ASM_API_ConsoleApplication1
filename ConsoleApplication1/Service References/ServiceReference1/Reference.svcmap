@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="677793e7-84af-4cd6-9ea7-7588cb32c47f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SequoiaApiSoapService.xsd" MetadataType="Schema" ID="c75e75c9-09dd-49ca-9dde-da1010249959" SourceId="1" SourceUrl="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd3" />
+    <MetadataFile FileName="SequoiaApiSoapService1.xsd" MetadataType="Schema" ID="b7bb031a-4f12-44c7-b48f-1833637c0be8" SourceId="1" SourceUrl="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd5" />
+    <MetadataFile FileName="SequoiaApiSoapService.disco" MetadataType="Disco" ID="bce67104-1002-4429-9412-3a4cf55938ec" SourceId="1" SourceUrl="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?disco" />
+    <MetadataFile FileName="SequoiaApiSoapService2.xsd" MetadataType="Schema" ID="b2df2888-f9b0-4b85-a88b-f593426ffa19" SourceId="1" SourceUrl="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd2" />
+    <MetadataFile FileName="SequoiaApiSoapService.wsdl" MetadataType="Wsdl" ID="045a5d16-8345-4583-b7b4-603597ee5472" SourceId="1" SourceUrl="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?wsdl" />
+    <MetadataFile FileName="SequoiaApiSoapService3.xsd" MetadataType="Schema" ID="b2d7d1a4-7041-4688-841e-1cf09e78c297" SourceId="1" SourceUrl="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd4" />
+    <MetadataFile FileName="SequoiaApiSoapService4.xsd" MetadataType="Schema" ID="ef05dbea-b223-496f-992e-e45f1012a776" SourceId="1" SourceUrl="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd0" />
+    <MetadataFile FileName="SequoiaApiSoapService5.xsd" MetadataType="Schema" ID="beac078c-3cbd-46a6-9b69-d26eeb990f1a" SourceId="1" SourceUrl="http://172.22.43.105:9010/Asm/Sequoia/SequoiaApiSoapService?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
